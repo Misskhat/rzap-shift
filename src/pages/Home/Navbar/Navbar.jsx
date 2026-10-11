@@ -1,8 +1,58 @@
-import React from "react";
+import { Link, NavLink } from "react-router";
+import Logo from "../../../components/shared/Logo";
 
 const Navbar = () => {
+  const list = (
+    <>
+      <NavLink
+        to={"/services"}
+        className={({ isActive }) =>
+          isActive ? "border-b text-green-500" : ""
+        }
+      >
+        <li className={"hover:bg-base-300 px-4 py-2  rounded"}> Services</li>
+      </NavLink>
+
+      <NavLink
+        to={"/coverage"}
+        className={({ isActive }) =>
+          isActive ? "border-b text-green-500" : ""
+        }
+      >
+        <li className={"hover:bg-base-300 px-4 py-2  rounded"}> Coverage</li>
+      </NavLink>
+
+      <NavLink
+        to={"/aboutUs"}
+        className={({ isActive }) =>
+          isActive ? "border-b text-green-500" : ""
+        }
+      >
+        <li className={"hover:bg-base-300 px-4 py-2  rounded"}> About Us</li>
+      </NavLink>
+
+      <NavLink
+        to={"/pricing"}
+        className={({ isActive }) =>
+          isActive ? "border-b text-green-500" : ""
+        }
+      >
+        <li className={"hover:bg-base-300 px-4 py-2  rounded"}> Pricing</li>
+      </NavLink>
+
+      <NavLink
+        to={"/be-a-rider"}
+        className={({ isActive }) =>
+          isActive ? "border-b text-green-500" : ""
+        }
+      >
+        <li className={"hover:bg-base-300 px-4 py-2  rounded"}> Be a Rider</li>
+      </NavLink>
+    </>
+  );
+
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm px-4 mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -25,54 +75,21 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={-1}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="flex flex-col gap-1 dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            {list}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <Link to={"/"} className="text-xl">
+          <Logo />
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2 bg-base-100 w-40 z-1">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
-        </ul>
+        <ul className="flex gap-2">{list}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end gap-2">
+        <button className="btn btn-xs sm:btn-sm md:btn-md ">Responsive</button>
+        <button className="btn btn-xs sm:btn-sm md:btn-md">Responsive</button>
       </div>
     </div>
   );
