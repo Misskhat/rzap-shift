@@ -67,51 +67,53 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm px-4 mx-auto">
-      <div className="navbar-start">
-        <div className="dropdown lg:hidden">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              aria-label="Menu"
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+    <div className="bg-base-100 shadow-2xs">
+      <div className="navbar w-11/12 mx-auto">
+        <div className="navbar-start">
+          <div className="dropdown lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg
+                aria-label="Menu"
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {" "}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />{" "}
+              </svg>
+            </div>
+            <ul
+              tabIndex={-1}
+              className="flex flex-col gap-1 dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              {" "}
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />{" "}
-            </svg>
+              {list}
+            </ul>
           </div>
-          <ul
-            tabIndex={-1}
-            className="flex flex-col gap-1 dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-          >
-            {list}
-          </ul>
+          <Link to={"/"} className="text-xl">
+            <div className="relative">
+              <Logo />
+            </div>
+            <span className="font-bold absolute top-6 lg:top-6 lg:left-8 max-lg:left-22 max-sm:left-15 text-xs md:text-xl text-black">
+              RZap-Shift
+            </span>
+          </Link>
         </div>
-        <Link to={"/"} className="text-xl">
-          <div className="relative">
-            <Logo />
-          </div>
-          <span className="font-bold absolute top-6 lg:top-6 lg:left-8 max-lg:left-22 max-sm:left-15 text-xs md:text-xl text-black">
-            RZap-Shift
-          </span>
-        </Link>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="flex gap-2">{list}</ul>
-      </div>
-      <div className="navbar-end gap-2">
-        <button className="btn btn-xs sm:btn-sm md:btn-md ">Sign In</button>
-        <button className="btn bg-[#CAEB66] btn-xs sm:btn-sm md:btn-md">
-          Be a rider
-        </button>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="flex gap-2">{list}</ul>
+        </div>
+        <div className="navbar-end gap-2">
+          <button className="btn btn-xs sm:btn-sm md:btn-md ">Sign In</button>
+          <button className="btn bg-primary btn-xs sm:btn-sm md:btn-md">
+            Be a rider
+          </button>
+        </div>
       </div>
     </div>
   );
