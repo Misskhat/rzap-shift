@@ -10,7 +10,10 @@ const Navbar = () => {
           isActive ? "border-b text-green-500" : ""
         }
       >
-        <li className={"hover:bg-base-300 px-4 py-2  rounded"}> Services</li>
+        <li className={"hover:bg-base-300 px-4 py-2 font-semibold rounded"}>
+          {" "}
+          Services
+        </li>
       </NavLink>
 
       <NavLink
@@ -19,7 +22,10 @@ const Navbar = () => {
           isActive ? "border-b text-green-500" : ""
         }
       >
-        <li className={"hover:bg-base-300 px-4 py-2  rounded"}> Coverage</li>
+        <li className={"hover:bg-base-300 px-4 py-2 font-semibold rounded"}>
+          {" "}
+          Coverage
+        </li>
       </NavLink>
 
       <NavLink
@@ -28,7 +34,10 @@ const Navbar = () => {
           isActive ? "border-b text-green-500" : ""
         }
       >
-        <li className={"hover:bg-base-300 px-4 py-2  rounded"}> About Us</li>
+        <li className={"hover:bg-base-300 px-4 py-2 font-semibold rounded"}>
+          {" "}
+          About Us
+        </li>
       </NavLink>
 
       <NavLink
@@ -37,7 +46,10 @@ const Navbar = () => {
           isActive ? "border-b text-green-500" : ""
         }
       >
-        <li className={"hover:bg-base-300 px-4 py-2  rounded"}> Pricing</li>
+        <li className={"hover:bg-base-300 px-4 py-2 font-semibold rounded"}>
+          {" "}
+          Pricing
+        </li>
       </NavLink>
 
       <NavLink
@@ -46,7 +58,10 @@ const Navbar = () => {
           isActive ? "border-b text-green-500" : ""
         }
       >
-        <li className={"hover:bg-base-300 px-4 py-2  rounded"}> Be a Rider</li>
+        <li className={"hover:bg-base-300 px-4 py-2 font-semibold rounded"}>
+          {" "}
+          Be a Rider
+        </li>
       </NavLink>
     </>
   );
@@ -54,7 +69,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm px-4 mx-auto">
       <div className="navbar-start">
-        <div className="dropdown">
+        <div className="dropdown lg:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               aria-label="Menu"
@@ -81,15 +96,22 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to={"/"} className="text-xl">
-          <Logo />
+          <div className="relative">
+            <Logo />
+          </div>
+          <span className="font-bold absolute top-6 lg:top-6 lg:left-8 max-lg:left-22 max-sm:left-15 text-xs md:text-xl text-black">
+            RZap-Shift
+          </span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="flex gap-2">{list}</ul>
       </div>
       <div className="navbar-end gap-2">
-        <button className="btn btn-xs sm:btn-sm md:btn-md ">Responsive</button>
-        <button className="btn btn-xs sm:btn-sm md:btn-md">Responsive</button>
+        <button className="btn btn-xs sm:btn-sm md:btn-md ">Sign In</button>
+        <button className="btn bg-[#CAEB66] btn-xs sm:btn-sm md:btn-md">
+          Be a rider
+        </button>
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
-import React from "react";
+import { Link } from "react-router";
+import logo from "../../assets/logo.png";
 import Logo from "./Logo";
-
 const Footer = () => {
   return (
-    <footer className="footer footer-horizontal footer-center bg-primary text-primary-content p-10">
+    <footer className="footer footer-horizontal footer-center p-5">
       <aside>
         <div>
           <Logo />
