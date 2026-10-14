@@ -67,7 +67,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="bg-base-100 shadow-2xs">
+    <div>
       <div className="navbar w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown lg:hidden">

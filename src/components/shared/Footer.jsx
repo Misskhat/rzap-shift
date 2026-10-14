@@ -19,12 +19,37 @@ const Footer = () => {
           deliver on time, every time.
         </p>
       </aside>
-      <div className="border-t-2 border-mist-500 border-b-2 border-dashed w-full flex gap-3 justify-center items-center py-2 text-mist-400">
-        <NavLink to={"/services"}>Services</NavLink>
-        <NavLink to={"/coverage"}>Coverage</NavLink>
-        <NavLink to={"/aboutUs"}>About Us</NavLink>
-        <NavLink to={"/pricing"}>Pricing</NavLink>
-        <NavLink to={"/be-a-rider"}>Be a Rider</NavLink>
+      <div className="border-t-2 border-mist-800 border-b-2 border-dashed w-full flex gap-3 justify-center items-center py-2 text-mist-400">
+        <NavLink
+          to={"/services"}
+          className={"hover:text-white transition-all delay-75"}
+        >
+          Services
+        </NavLink>
+        <NavLink
+          to={"/coverage"}
+          className={"hover:text-white transition-all delay-75"}
+        >
+          Coverage
+        </NavLink>
+        <NavLink
+          to={"/aboutUs"}
+          className={"hover:text-white transition-all delay-75"}
+        >
+          About Us
+        </NavLink>
+        <NavLink
+          to={"/pricing"}
+          className={"hover:text-white transition-all delay-75"}
+        >
+          Pricing
+        </NavLink>
+        <NavLink
+          to={"/be-a-rider"}
+          className={"hover:text-white transition-all delay-75"}
+        >
+          Be a Rider
+        </NavLink>
       </div>
       <nav>
         <div className="grid grid-flow-col gap-4">
