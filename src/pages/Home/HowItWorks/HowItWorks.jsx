@@ -31,7 +31,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className="md:my-20 my-10">
+    <div className=" my-10">
       <h3 className="text-secondary text-2xl font-bold">How It Works</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 my-5">
         {works.map((work, idx) => (
