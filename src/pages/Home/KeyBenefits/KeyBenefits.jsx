@@ -24,7 +24,7 @@ const KeyBenefits = () => {
   ];
   return (
     <div className="my-20 border-b-2 border-t-2 border-dashed border-gray-500">
-      <div className="my-10 flex flex-col gap-10">
+      <div className="my-20 flex flex-col gap-10">
         {keyBenefits.map((benefit, idx) => (
           <div
             key={idx}

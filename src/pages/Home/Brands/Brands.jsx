@@ -11,7 +11,7 @@ import star from "../../../assets/brands/star.png";
 import starPeople from "../../../assets/brands/start_people.png";
 
 const Brands = () => {
-  const brands = [amazon, casio, moonstar, , randstad, star, starPeople];
+  const brands = [amazon, casio, moonstar, randstad, star, starPeople];
 
   return (
     <div className="my-20">
