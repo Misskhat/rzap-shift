@@ -4,10 +4,10 @@ import beAMerchantBg from "../../../assets/be-a-merchant-bg.png";
 const Merchant = () => {
   return (
     <div className="relative my-20 bg-secondary p-10 rounded-xl flex items-center justify-around">
-      <div className="absolute top-0 left-2">
+      <div className="absolute top-0 left-2 z-0">
         <img src={beAMerchantBg} alt="" />
       </div>
-      <div className=" flex flex-col gap-4 flex-1">
+      <div className=" flex flex-col gap-4 flex-1 z-20">
         <h3 className="text-2xl font-bold text-white">
           Merchant and Customer Satisfaction is Our First Priority
         </h3>
@@ -20,7 +20,12 @@ const Merchant = () => {
           <button className="btn bg-primary font-bold rounded-2xl outline-none">
             Become a Merchant
           </button>
-          <button className="btn bg-transparent text-primary outline-1 hover:bg-primary hover:text-black rounded-2xl outline-none">
+          <button
+            onClick={() =>
+              alert("feture not yet applied. Very soon it will be available.")
+            }
+            className="btn bg-transparent text-primary outline-1 hover:bg-primary hover:text-black rounded-2xl outline-none"
+          >
             Earn with ZapShift Courier
           </button>
         </div>
