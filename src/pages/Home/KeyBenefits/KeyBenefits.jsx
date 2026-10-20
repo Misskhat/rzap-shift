@@ -1,5 +1,6 @@
 import liveTracing from "../../../assets/live-tracking.png";
 import safeDelevery from "../../../assets/safe-delivery.png";
+import KeyBenefitCard from "./KeyBenefitCard";
 
 const KeyBenefits = () => {
   const keyBenefits = [
@@ -24,20 +25,9 @@ const KeyBenefits = () => {
   ];
   return (
     <div className="my-20 border-b-2 border-t-2 border-dashed border-gray-500">
-      <div className="my-20 flex flex-col gap-10">
+      <div className="flex flex-col gap-5 p-4 sm:p-6">
         {keyBenefits.map((benefit, idx) => (
-          <div
-            key={idx}
-            className="flex max-sm:flex-col items-center justify-center gap-10 bg-gray-100 p-8 rounded-2xl"
-          >
-            <div className="md:border-r-2 border-dashed border-gray-500 pr-10 w-40">
-              <img src={benefit.img} alt={benefit.img} />
-            </div>
-            <div className="space-y-3">
-              <h3 className="text-xl font-bold">{benefit.heading}</h3>
-              <p className="leading-relaxed">{benefit.description}</p>
-            </div>
-          </div>
+          <KeyBenefitCard key={idx} benefit={benefit}></KeyBenefitCard>
         ))}
       </div>
     </div>
