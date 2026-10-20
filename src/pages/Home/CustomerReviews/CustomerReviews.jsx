@@ -26,34 +26,53 @@ const CustomerReviews = () => {
           body with ease!
         </p>
       </div>
-      <Swiper
-        loop={true}
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={3}
-        coverflowEffect={{
-          rotate: 30,
-          stretch: "50%",
-          depth: 200,
-          modifier: 1,
-          scale: 0.75,
-          slideShadows: true,
-        }}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination, Autoplay]}
-        className="mySwiper"
-      >
-        {reviews.map((review) => (
-          <SwiperSlide key={review.id}>
-            <TestimonialCard review={review}></TestimonialCard>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="max-sm:hidden">
+        <Swiper
+          loop={true}
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={3}
+          coverflowEffect={{
+            rotate: 30,
+            stretch: "50%",
+            depth: 200,
+            modifier: 1,
+            scale: 0.75,
+            slideShadows: true,
+          }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          pagination={true}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
+          className="mySwiper"
+        >
+          {reviews.map((review) => (
+            <SwiperSlide key={review.id}>
+              <TestimonialCard review={review}></TestimonialCard>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className="md:hidden">
+        <Swiper
+          loop={true}
+          slidesPerView={1}
+          centeredSlides={true}
+          spaceBetween={30}
+          grabCursor={true}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
+          modules={[Autoplay]}
+        >
+          {reviews.map((review) => (
+            <SwiperSlide key={review.id}>
+              <TestimonialCard review={review}></TestimonialCard>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };

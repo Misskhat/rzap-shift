@@ -17,12 +17,12 @@ const Banner = () => {
       <div className="relative w-full">
         <img src={banner1} />
         <div className=" absolute bottom-24 left-24 flex gap-3">
-          <Link className="btn bg-primary rounded-xl outline-1 outline-primary">
+          <Link className="btn bg-primary rounded-xl outline-1 outline-primary max-sm:hidden">
             Track Your Parcel
           </Link>
           <Link
             to={"/be-a-rider"}
-            className="btn rounded-xl bg-white outline-1 outline-primary"
+            className="btn rounded-xl bg-white outline-1 outline-primary max-sm:hidden"
           >
             Be A Rider
           </Link>
@@ -31,12 +31,12 @@ const Banner = () => {
       <div className="relative w-full">
         <img src={banner2} />
         <div className=" absolute bottom-24 left-24 flex gap-3">
-          <Link className="btn bg-primary rounded-xl outline-1 outline-primary">
+          <Link className="btn bg-primary rounded-xl outline-1 outline-primary max-sm:hidden">
             Track Your Parcel
           </Link>
           <Link
             to={"/be-a-rider"}
-            className="btn rounded-xl bg-white outline-1 outline-primary"
+            className="btn rounded-xl bg-white outline-1 outline-primary max-sm:hidden"
           >
             Be A Rider
           </Link>
@@ -45,12 +45,12 @@ const Banner = () => {
       <div className="relative w-full">
         <img src={banner3} />
         <div className=" absolute bottom-32 left-24 flex gap-3">
-          <Link className="btn bg-primary rounded-xl outline-1 outline-primary">
+          <Link className="btn bg-primary rounded-xl outline-1 outline-primary max-sm:hidden">
             Track Your Parcel
           </Link>
           <Link
             to={"/be-a-rider"}
-            className="btn rounded-xl bg-white outline-1 outline-primary"
+            className="btn rounded-xl bg-white outline-1 outline-primary max-sm:hidden"
           >
             Be A Rider
           </Link>

@@ -28,10 +28,10 @@ const KeyBenefits = () => {
         {keyBenefits.map((benefit, idx) => (
           <div
             key={idx}
-            className="flex items-center gap-10 bg-gray-100 p-8 rounded-2xl"
+            className="flex max-sm:flex-col items-center justify-center gap-10 bg-gray-100 p-8 rounded-2xl"
           >
-            <div className="border-r-2 border-dashed border-gray-500 pr-10">
-              <img src={benefit.img} alt={benefit.img} className="w-36 h-36" />
+            <div className="md:border-r-2 border-dashed border-gray-500 pr-10 w-40">
+              <img src={benefit.img} alt={benefit.img} />
             </div>
             <div className="space-y-3">
               <h3 className="text-xl font-bold">{benefit.heading}</h3>
