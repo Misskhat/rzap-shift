@@ -109,7 +109,9 @@ const Navbar = () => {
           <ul className="flex gap-2">{list}</ul>
         </div>
         <div className="navbar-end gap-2">
-          <button className="btn btn-xs sm:btn-sm md:btn-md ">Sign In</button>
+          <Link to={"/login"} className="btn btn-xs sm:btn-sm md:btn-md ">
+            Sign In
+          </Link>
           <button className="btn bg-primary btn-xs sm:btn-sm md:btn-md">
             Be a rider
           </button>

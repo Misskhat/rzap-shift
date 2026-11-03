@@ -6,6 +6,9 @@ import Coverage from "../pages/Coverage/Coverage";
 import Pricing from "../pages/Pricing/Pricing";
 import BeArider from "../pages/BeARider/BeArider";
 import AboutUs from "../pages/AboutUs/AboutUs";
+import AuthLayout from "../layouts/AuthLayout";
+import Login from "../pages/Auth/Login/Login";
+import Register from "../pages/Auth/Register/Register";
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +38,20 @@ export const router = createBrowserRouter([
       {
         path: "be-a-rider",
         element: <BeArider />,
+      },
+    ],
+  },
+  {
+    path: "/",
+    Component: AuthLayout,
+    children: [
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
       },
     ],
   },
